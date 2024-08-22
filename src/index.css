@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+@layer components {
+    .sidebar-icon{
+        @apply relative flex items-center justify-center 
+        h-11 w-11 mt-2 mb-2 mx-auto shadow-lg bg-blue-950 hover:bg-gray-700
+        rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear;
+                
+    }
+    
+    /* .sidebar-hometxt{
+        @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900
+        text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    } */
+
+
+}

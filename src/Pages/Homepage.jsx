@@ -60,145 +60,171 @@ function Homepage() {
                 </div>
                 {/* Skills section */}
                 <h3 className="text-3xl py-5 dark:text-white">My Skills</h3>
-                <div className='container mx-auto p-6 grid grid-cols-2 gap-4'>
-                    <div className='col-span-1 flex flex-col bg-white border-2 rounded-xl p-4'>
-                        <h2 className='mb-2 font-bold text-2xl text-center py-5'> Front-End Development</h2>
-                        {/* <div class="mb-4 flex flex-wrap">
-                            <span class="mr-2">Link 1</span>
-                            <span class="mr-2">Link 2</span>
-                        </div> */}
-                        <div className='flex items-center text-green-500 dark:text-white'>
-                                  <BsFillPatchCheckFill/>
-                                  <div className='px-1'>
-                                      <p className='text-gray-800 leading-none text-sm dark:text-white md:text-xl'>HTML</p>   
-                                  </div>
-                            </div>
-                      </div>
-                      <div class="col-span-1 flex flex-col bg-white border-2 p-4">
-                        <h2 class="mb-2 font-bold text-2xl">
-                          Card Name
-                        </h2>
-                        <div class="mb-4 flex flex-wrap">
-                            <span class="mr-2">Link 1</span>
-                            <span class="mr-2">Link 2</span>
+                <div className='flex flex-wrap justify-center'>
+                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                        {/* Heading */}
+                        <div className='h-50'>
+                            <h4 className='font-semibold text-center py-5 dark:text-white'>Front-End Development</h4>
                         </div>
-                        <p class="text-md text-justify">Some Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel enim lectus.</p>
-                        <div class="flex flex-wrap mt-auto pt-3 text-xs">
-                          <p class="mr-2 mb-2">Tag #1</p>
-                          <p class="mr-2 mb-2">Tag #2</p>
+
+                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>HTML</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>CSS</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>JavaScript</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Bootstrap</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>React</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Tailwind</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                        <div className='h-50'>
+                            <h4 className='font-semibold text-center py-5 dark:text-white'>Back-End Development</h4>
+                        </div>
+                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>MySQL</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>MongoDB</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Basic</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>PHP</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Basic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                        <div className='h-50'>
+                            <h4 className='font-semibold text-center py-5 dark:text-white'>Graphic / Video Editing Tools</h4>
+                        </div>
+                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Animate</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>After Effects</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Figma</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Intermediate</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Canva</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Photoshop</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Intermediate</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Sony Vegas</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                        <div className='h-50'>
+                            <h4 className='font-semibold text-center py-5 dark:text-white'>Office Tools</h4>
+                        </div>
+                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Word</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Excel</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Intermediate</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Powerpoint</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-shrink-0 text-green-500 dark:text-white'>
+                                <BsFillPatchCheckFill/>
+                                <div className='leading-none'>
+                                    <p>Outlook</p>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Intermediate</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {/* <div className='lg:flex gap-5 dark:text-white'>                   
-                    <div className='dark:bg-blue-900 text-center shadow-xl lg:pb-10 rounded-xl lg:px-20 my-5
-                                    pb-10 p-12 xs:px-28 sm:px-36 md:px-40'>
-                        <h4 className='lg:p-10 lg:px-0 font-semibold md:text-xl'>Front-End Development</h4>
-                        <div className='grid grid-cols-2 gap-3 my-5'>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-1'>
-                                    <p className='text-gray-800 leading-none text-sm dark:text-white md:text-xl'>HTML</p>   
-                                </div>
-                            </div>
-                            
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-1'>
-                                    <p className='text-gray-800 leading-none text-sm dark:text-white md:text-xl'>CSS</p>  
-                                </div>
-                            </div>
-                            <div className='flex items-center lg:flex text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-1'>
-                                    <p className='text-gray-800 leading-none text-sm dark:text-white md:text-xl'>JavaScript</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-1'>
-                                    <p className='text-gray-800 py-1 text-sm dark:text-white md:text-xl'>Bootstrap</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-1'>
-                                    <p className='text-gray-800 py-1 text-sm dark:text-white md:text-xl'>React</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-1'>
-                                    <p className='text-gray-800 py-1 text-sm dark:text-white md:text-xl'>Tailwind</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='dark:bg-blue-900 text-center shadow-xl p-12 my-5 lg:pb-10 rounded-xl xs:px-28 sm:px-36 md:px-40 lg:px-24'>
-                        <h4 className='lg:p-10 lg:px-0 font-semibold md:text-xl'>Back-End Development</h4>
-                            <div className='grid grid-cols-2 gap-3 my-5'>
-                                <div className='flex items-center text-green-500 dark:text-white'>
-                                    <BsFillPatchCheckFill/>
-                                    <div className='px-1'>
-                                        <p className='text-gray-800 text-sm dark:text-white md:text-xl'>MySQL</p>
-                                    </div>
-                                </div>
-                                <div className='flex items-center text-green-500 dark:text-white'>
-                                    <BsFillPatchCheckFill/>
-                                    <div className='px-1'>
-                                        <p className='text-gray-800 text-sm dark:text-white md:text-xl'>MongoDB</p>
-                                    </div>
-                                </div>
-                                <div className='flex items-center text-green-500 dark:text-white'>
-                                    <BsFillPatchCheckFill/>
-                                    <div className='px-1'>
-                                        <p className='text-gray-800 text-sm dark:text-white md:text-xl'>PHP</p>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div className='dark:bg-blue-900 text-center shadow-xl p-12 rounded-xl xs:px-28 sm:px-36 md:px-40 lg:px-12
-                                    lg:py-5'>
-                    <h4 className='lg:p-10 lg:px-0 font-semibold md:text-xl'>Graphic / Video Editing Tools</h4>
-                        <div className='grid grid-cols-2 gap-3 my-5'>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-2'>
-                                    <p className='text-gray-800 text-sm dark:text-white md:text-xl'>Animate</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-1'>
-                                    <p className='text-gray-800 text-sm dark:text-white md:text-xl'> Photoshop</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-2'>
-                                    <p className='text-gray-800 text-sm dark:text-white md:text-xl'>AE</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-2'>
-                                    <p className='text-gray-800 text-sm dark:text-white md:text-xl'>Figma</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-2'>
-                                    <p className='text-gray-800 text-sm dark:text-white md:text-xl'>Canva</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center text-green-500 dark:text-white'>
-                                <BsFillPatchCheckFill/>
-                                <div className='px-2'>
-                                    <p className='text-gray-800 text-sm dark:text-white md:text-xl'>Vegas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </section>
             <section>
                 {/* Portfolio */}

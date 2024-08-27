@@ -18,8 +18,13 @@ module.exports = {
       animation: {
         typewriter: 'typewriter 2s steps(11) forwards',
         caret: 'typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s',
+        fade: 'fadeIn .5s ease-in-out',
       },
       keyframes:{
+        fadeIn: {
+          from: { opacity: 0},
+          to: { opacity: 1},
+        },
         typewriter:{
           to:{
             left: '100%',

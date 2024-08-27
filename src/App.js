@@ -5,7 +5,7 @@ import ScrollBtn from './Components/ScrolltoTopBtn.jsx';
 
 function App() {
   return (
-    <div>
+    <div className='animate-fade'>
       {/* <Sidebar/> */}
       <Homepage/>   
       <ScrollBtn/>

@@ -16,10 +16,11 @@ import { IoIosArrowDroprightCircle, IoMdMail } from "react-icons/io";
 import { SiAdobephotoshop } from "react-icons/si";
 import ScrollBtn from '../Components/ScrolltoTopBtn.jsx';
 import Modal from '../Components/Modal.jsx';
-
+import CV from '../Assets/CV_ORO.pdf';
 
 
 function Homepage() {
+
     const [darkMode, setDarkMode] = useState(false); 
 
     // Modals
@@ -55,15 +56,23 @@ function Homepage() {
                     </p>
                 </div>
                 <div className='flex justify-center'>
-                    <button className='bg-transparent hover:bg-green-500 text-green-700 font-semibold
-                    hover:text-white py-3 px-4 border border-green-500 hover:border-transparent rounded-full
-                    hover:ease-in duration-150 dark:text-yellow-300 dark:border-yellow-300 dark:hover:bg-yellow-400 dark:hover:text-white'
-                    >Download CV</button>
+                    <a href={CV} download="CV_ORO" >
+                        <button type='submit' className='bg-transparent hover:bg-green-500 text-green-700 font-semibold
+                        hover:text-white py-3 px-4 border border-green-500 hover:border-transparent rounded-full
+                        hover:ease-in duration-150 dark:text-yellow-300 dark:border-yellow-300 dark:hover:bg-yellow-400 dark:hover:text-white'
+                        >Download CV</button>
+                    </a>
                 </div>
                 <div className='text-5xl flex justify-center gap-10 py-10 text-gray-600'>
-                    <FaLinkedin className='dark:text-white'/>
-                    <FaYoutube  className='dark:text-white'/>
-                    <FaGithub   className='dark:text-white'/>
+                    <a href='https://www.linkedin.com/in/john-averian-oro-b8ab41280/' target='blank'>
+                        <FaLinkedin className='dark:text-white cursor-pointer'/>
+                    </a>
+                    <a href='https://www.youtube.com/Rayn2D' target='blank'>
+                        <FaYoutube  className='dark:text-white cursor-pointer'/>
+                    </a>
+                    <a href='https://github.com/RaynGH' target='blank'>
+                        <FaGithub   className='dark:text-white cursor-pointer'/>
+                    </a>
                 </div>
                 <div className='relative mx-auto w-80 h-80 mt-10 md:h-96 md:w-96'>
                     <img src={Image} className='object-cover' alt='profile'/>

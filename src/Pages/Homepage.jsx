@@ -4,7 +4,7 @@ import Image from '../Images/CroppedPic.png';
 import { FaLinkedin, FaYoutube, FaGithub, FaViber, FaFacebookMessenger } from "react-icons/fa";
 import { MdSunny, MdOutlineSupportAgent, MdDesignServices } from "react-icons/md";
 import { BsFillPatchCheckFill, BsGlobe } from "react-icons/bs";
-import OrdersImg from '../Images/Orders.png';
+// import OrdersImg from '../Images/Orders.png';
 import { useState } from 'react';
 import PepsimanVsKefla from '../Images/PepsimanVsKefla.jpg';
 import GohanvsBlack from '../Images/GohanvsGokuBlack.jpg';
@@ -21,7 +21,7 @@ import CV from '../Assets/CV_ORO.pdf';
 
 function Homepage() {
 
-    const [darkMode, setDarkMode] = useState(false); 
+    const [darkMode, setDarkMode] = useState(true); 
 
     // Modals
     const [open, setOpen] = useState(false);
@@ -46,11 +46,13 @@ function Homepage() {
                 {/* Intro Section */}
                 {/* text-5xl py-2 text-blue-600 font-medium md:text-6xl dark:text-yellow-300 */}
                 <div className='text-center p-10'>
-                    <center><h2 className='text-4xl relative inline-block w-full max-w-md text-green-500 font-medium md:text-6xl before:absolute before:inset-0 
-                                    before:animate-typewriter 
+                    <center><h2 className='text-4xl relative inline-block w-full max-w-md text-green-500 font-medium md:text-3xl 
+                                    before:absolute before:inset-0 before:animate-typewriter 
                                   before:bg-gray-100 dark:before:bg-gray-900 after:absolute after:inset-1 after:w-[0.200em]
-                                    after:animate-caret after:bg-green-500 dark:after:bg-yellow-300 dark:text-yellow-300'>John Averian Oro</h2></center>
-                    <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Developer / Pixel Animator.</h3>
+                                    after:animate-caret after:bg-green-500 dark:after:bg-yellow-300 dark:text-yellow-300
+                                    xs:text-sm sm:text-2xl ms:text-[15px] lg:text-3xl'>
+                                    John Averian Oro</h2></center>
+                    <h3 className='text-2xl py-2 md:text-3xl dark:text-white ms:text-md'>Developer / Pixel Animator.</h3>
                     <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-white'>
                         I'm an aspiring developer and aims to provide services for programming and motion graphics design.
                     </p>
@@ -74,7 +76,7 @@ function Homepage() {
                         <FaGithub   className='dark:text-white cursor-pointer'/>
                     </a>
                 </div>
-                <div className='relative mx-auto w-80 h-80 mt-10 md:h-96 md:w-96'>
+                <div className='relative mt-10 lg:mx-auto md:mx-auto md:h-72 md:w-72 sm:h-72 sm:w-72 xs:mx-auto xs:h-72 xs:w-72'>
                     <img src={Image} className='object-cover' alt='profile'/>
                 </div>
             </section>
@@ -91,13 +93,13 @@ function Homepage() {
                 {/* Skills section */}
                 <h3 className="text-2xl py-5 dark:text-white font-semibold">My Skills</h3>
                 <div className='flex flex-wrap justify-center'>
-                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                    <div className='w-96 rounded-lg bg-white shadow-lg  mb-5 sm:mx-5 xs:mx-5 xs:text-sm ms:text-sm  dark:bg-blue-950'>
                         {/* Heading */}
                         <div className='h-50'>
                             <h4 className='font-semibold text-center py-5 dark:text-white'>Front-End Development</h4>
                         </div>
 
-                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                        <div className='grid grid-cols-2 gap-2 lg:text-[15px] lg:mx-10 ml:mx-10 md:mx-20 ms:px-5 pb-10 ms:text-[12px]'>
                             <div className='flex flex-shrink-0 text-green-500 dark:text-yellow-300'>
                                 <BsFillPatchCheckFill/>
                                 <div className='leading-none'>
@@ -142,11 +144,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 xs:mx-5 xs:text-sm dark:bg-blue-950'>
                         <div className='h-50'>
-                            <h4 className='font-semibold text-center py-5 dark:text-white'>Back-End Development</h4>
+                            <h4 className='font-semibold text-center py-5 dark:text-white ms:text-sm'>Back-End Development</h4>
                         </div>
-                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                        <div className='grid grid-cols-2 gap-2 lg:text-[15px] lg:mx-10 ml:mx-10 ms:px-5 ms:text-[12px] pb-10'>
                             <div className='flex flex-shrink-0 text-green-500 dark:text-yellow-300'>
                                 <BsFillPatchCheckFill/>
                                 <div className='leading-none'>
@@ -170,11 +172,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 xs:mx-5 xs:text-sm dark:bg-blue-950'>
                         <div className='h-50'>
-                            <h4 className='font-semibold text-center py-5 dark:text-white'>Graphic / Video Editing Tools</h4>
+                            <h4 className='font-semibold text-center py-5 dark:text-white ms:text-sm'>Graphic / Video Editing Tools</h4>
                         </div>
-                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                        <div className='grid grid-cols-2 gap-2 lg:text-[15px] lg:mx-10 ml:mx-10 ms:px-5 ms:text-[12px] pb-10'>
                             <div className='flex flex-shrink-0 text-green-500 dark:text-yellow-300'>
                                 <BsFillPatchCheckFill/>
                                 <div className='leading-none'>
@@ -219,11 +221,11 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
+                    <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 xs:mx-5 xs:text-sm dark:bg-blue-950'>
                         <div className='h-50'>
-                            <h4 className='font-semibold text-center py-5 dark:text-white'>Office Tools</h4>
+                            <h4 className='font-semibold text-center py-5 dark:text-white ms:text-sm'>Office Tools</h4>
                         </div>
-                        <div className='grid grid-cols-2 gap-2 px-16 pb-10'>
+                        <div className='grid grid-cols-2 gap-2 lg:text-[15px] lg:mx-10 ml:mx-10 ms:px-5 ms:text-[12px] pb-10'>
                             <div className='flex flex-shrink-0 text-green-500 dark:text-yellow-300'>
                                 <BsFillPatchCheckFill/>
                                 <div className='leading-none'>

@@ -1,8 +1,9 @@
 import React from 'react';
-import { FaMoon } from "react-icons/fa";
+// import { FaMoon } from "react-icons/fa";
 import Image from '../Images/CroppedPic.png';
-import { FaLinkedin, FaYoutube, FaGithub } from "react-icons/fa";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import { FaLinkedin, FaYoutube, FaGithub, FaViber, FaFacebookMessenger } from "react-icons/fa";
+import { MdSunny, MdOutlineSupportAgent, MdDesignServices } from "react-icons/md";
+import { BsFillPatchCheckFill, BsGlobe } from "react-icons/bs";
 import OrdersImg from '../Images/Orders.png';
 import { useState } from 'react';
 import PepsimanVsKefla from '../Images/PepsimanVsKefla.jpg';
@@ -10,9 +11,20 @@ import GohanvsBlack from '../Images/GohanvsGokuBlack.jpg';
 import FCvsB from '../Images/FriezaCellVsBroly.jpg';
 import GokuvsBardock from '../Images/GokuVsBardock.jpg';
 import GvV from '../Images/GogetavsVegito.jpg';
+import { IoIosArrowDroprightCircle, IoMdMail } from "react-icons/io";
+import { SiAdobephotoshop } from "react-icons/si";
+import ScrollBtn from '../Components/ScrolltoTopBtn.jsx';
+import Modal from '../Components/Modal.jsx';
+
 
 function Homepage() {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(false); 
+
+    // Modals
+    const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
+    const [open3, setOpen3] = useState(false);
+    const [open4, setOpen4] = useState(false);
 
     return (
         <div className={darkMode ? "dark" : ""}>
@@ -23,7 +35,7 @@ function Homepage() {
                     <h1 className='text-lg dark:text-white font-semibold'>RYAN</h1>
                     <ul className='flex items-center'>
                         <li>
-                            <FaMoon onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-lg dark:text-white
+                            <MdSunny onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-lg dark:text-white
                              dark:hover:text-yellow-300'/>
                         </li>
                     </ul>
@@ -31,18 +43,18 @@ function Homepage() {
                 {/* Intro Section */}
                 {/* text-5xl py-2 text-blue-600 font-medium md:text-6xl dark:text-yellow-300 */}
                 <div className='text-center p-10'>
-                    <center><h2 className='text-4xl relative inline-block w-full max-w-md text-blue-600 font-medium md:text-6xl before:absolute before:inset-0 
+                    <center><h2 className='text-4xl relative inline-block w-full max-w-md text-green-500 font-medium md:text-6xl before:absolute before:inset-0 
                                     before:animate-typewriter 
-                                  before:bg-white dark:before:bg-gray-900 after:absolute after:inset-1 after:w-[0.200em]
-                                    after:animate-caret after:bg-blue-600 dark:after:bg-yellow-300 dark:text-yellow-300'>John Averian Oro</h2></center>
+                                  before:bg-gray-100 dark:before:bg-gray-900 after:absolute after:inset-1 after:w-[0.200em]
+                                    after:animate-caret after:bg-green-500 dark:after:bg-yellow-300 dark:text-yellow-300'>John Averian Oro</h2></center>
                     <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Developer / Pixel Animator.</h3>
                     <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-white'>
                         I'm an aspiring developer and aims to provide services for programming and motion graphics design.
                     </p>
                 </div>
                 <div className='flex justify-center'>
-                    <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
-                    hover:text-white py-3 px-4 border border-blue-500 hover:border-transparent rounded-full
+                    <button className='bg-transparent hover:bg-green-500 text-green-700 font-semibold
+                    hover:text-white py-3 px-4 border border-green-500 hover:border-transparent rounded-full
                     hover:ease-in duration-150 dark:text-yellow-300 dark:border-yellow-300 dark:hover:bg-yellow-400 dark:hover:text-white'
                     >Download CV</button>
                 </div>
@@ -58,7 +70,7 @@ function Homepage() {
             {/* About me section */}
             <section>
                 <div className='mt-10'>
-                    <h3 className="text-3xl py-1 dark:text-white font-semibold">About me</h3>
+                    <h3 className="text-2xl py-1 dark:text-white font-semibold">About me</h3>
                     <p className=' text-md py-3 leading-8 text-gray-800 dark:text-white'>
                     Throughout my academic journey, I discovered the enjoyable yet 
                     intricate world of website development and pixel animation. Despite its complexities, 
@@ -66,7 +78,7 @@ function Homepage() {
                     </p>
                 </div>
                 {/* Skills section */}
-                <h3 className="text-3xl py-5 dark:text-white font-semibold">My Skills</h3>
+                <h3 className="text-2xl py-5 dark:text-white font-semibold">My Skills</h3>
                 <div className='flex flex-wrap justify-center'>
                     <div className='w-96 rounded-lg bg-white shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
                         {/* Heading */}
@@ -235,20 +247,8 @@ function Homepage() {
             </section>
             <section>
                 {/* Portfolio */}
-                <h3 className="text-3xl my-5 dark:text-white font-semibold">My Portfolio  / Previous works</h3>
+                <h3 className="text-2xl my-5 dark:text-white font-semibold">My Portfolio  / Previous works</h3>
                 <div className='flex flex-wrap justify-center'>
-                    {/* <div className='w-96 rounded-lg bg-white py-5 shadow-lg mb-5 sm:mx-5 dark:bg-blue-950'>
-                        <div className=''>
-                            <img src={OrdersImg} className='object-cover -my-5 rounded-t-lg' alt='orders'/>
-                            <p className='my-10 font-semibold dark:text-white text-center'>Pharma-Mediko: Customer Side</p>
-                        </div>
-                        <div className='flex justify-center'>
-                            <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
-                            hover:text-white py-3 px-4 border border-blue-500 hover:border-transparent rounded-full
-                            hover:ease-in duration-150 dark:text-yellow-300 dark:border-yellow-300 dark:hover:bg-yellow-400 dark:hover:text-white'
-                            >Details</button>
-                        </div>
-                    </div> */}
                     <div className='lg:grid lg:grid-cols-3 lg:gap-4'>
                         <div className='my-2 relative group shadow-xl'>
                             <a href='https://www.youtube.com/watch?v=HpWTzJZcoYg' target='blank'>
@@ -256,7 +256,7 @@ function Homepage() {
                                 className='object-cover rounded-xl group-hover:opacity-30 hover:ease-in-out duration-150
                                 cursor-pointer' alt='sprite1'/>
                                 <div className='opacity-0 group-hover:opacity-100 duration-300 absolute inset-y-5
-                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-blue-800 font-semibold '>
+                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-green-500 dark:text-white font-semibold '>
                                 Pepsiman vs Kefla
                                 </div>
                             </a>
@@ -267,7 +267,7 @@ function Homepage() {
                                 className='object-cover rounded-xl group-hover:opacity-50 hover:ease-in-out duration-150
                                 cursor-pointer' alt='sprite2'/>
                                 <div className='opacity-0 group-hover:opacity-100 duration-300 absolute inset-y-5
-                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-blue-800 font-semibold'>
+                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-green-500 dark:text-white font-semibold'>
                                 Gohan vs Goku Black
                                 </div>
                              </a>
@@ -278,7 +278,7 @@ function Homepage() {
                                 className='object-cover rounded-xl group-hover:opacity-50 hover:ease-in-out duration-150
                                 cursor-pointer' alt='sprite3'/>
                                 <div className='opacity-0 group-hover:opacity-100 duration-300 absolute inset-y-5
-                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-blue-800 font-semibold'>
+                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-green-500 dark:text-white font-semibold'>
                                 Frieza, Cell vs Broly
                                 </div>
                              </a>
@@ -289,7 +289,7 @@ function Homepage() {
                                 className='object-cover rounded-xl group-hover:opacity-50 hover:ease-in-out duration-150
                                 cursor-pointer' alt='sprite4'/>
                                 <div className='opacity-0 group-hover:opacity-100 duration-300 absolute inset-y-5
-                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-blue-800 font-semibold'>
+                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-green-500 dark:text-white font-semibold'>
                                 Goku vs Bardock
                                 </div>
                              </a>
@@ -300,20 +300,199 @@ function Homepage() {
                                 className='object-cover rounded-xl group-hover:opacity-50 hover:ease-in-out duration-150
                                 cursor-pointer' alt='sprite5'/>
                                 <div className='opacity-0 group-hover:opacity-100 duration-300 absolute inset-y-5
-                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-blue-800 font-semibold'>
+                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-green-500 dark:text-white font-semibold'>
                                 Gogeta vs Vegito
                                 </div>
                              </a>
                         </div>
-                        <div className='my-2 shadow-xl'>
-                            <img src={OrdersImg} className='object-cover rounded-xl hover:opacity-50 hover:ease-in-out duration-150
-                                                            cursor-pointer'
-                             alt='orders'/>
+                        <div className='my-2 relative group shadow-xl'>
+                                <img src={OrdersImg} 
+                                className='object-cover rounded-xl group-hover:opacity-50 hover:ease-in-out duration-150
+                                cursor-pointer' alt='orders'/>
+                                <div className='opacity-0 group-hover:opacity-100 duration-300 absolute inset-y-5
+                                inset-x-0 bottom-0 flex justify-center items-center text-lg text-green-500 dark:text-white font-semibold'>
+                                Pharma-Mediko
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className='mt-10'>                
+                    <h2 className='dark:text-white text-md text-center font-semibold py-4'>My Services</h2>
+                    <h4 className='dark:text-white text-xl text-center py-2'>What I can Offer</h4>
+                </div>
+                <div className='flex flex-wrap justify-center'>
+                    <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-2 flex-shrink-0'>
+                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                            <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><BsGlobe/></div>
+                            <h3 className='text-lg font-semibold mt-5'>Web Development</h3>
+                            <div className='flex py-5 my-2'>
+                                <button className='flex items-center' onClick={() => setOpen(true)}>See More 
+                                    <IoIosArrowDroprightCircle className='dark:text-yellow-300 text-green-500'/>
+                                </button>
+                                <Modal open={open} onClose={() => setOpen(false)}>
+                                    <div className='text-center w-80 my-5'>
+                                        <BsGlobe size={56} className='mx-auto text-green-500'/>
+                                        <div className='mx-auto my-4 w-80 text-justify'>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>Web Development</h3>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Building websites with HTML, CSS, and JavaScript.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Utilizing frameworks such as Bootstrap and Tailwind.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Integration of website to Progressive Web App &#40;PWA&#41;</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Less experience with Wordpress or Wix but can manage.</p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </Modal>
+                            </div>
+                        </div>
+                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                            <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500 '><MdOutlineSupportAgent/></div>
+                            <h3 className='text-lg font-semibold mt-5'>IT Support Service</h3>
+                            <div className='flex py-5 my-2'>
+                                <button className='flex items-center' onClick={() => setOpen2(true)}>See More <IoIosArrowDroprightCircle 
+                                className='dark:text-yellow-300 text-green-500'/>
+                                </button>
+                                <Modal open={open2} onClose={() => setOpen2(false)}>
+                                    <div className='text-center w-80 my-5'>
+                                        <MdOutlineSupportAgent size={56} className='mx-auto text-green-500'/>
+                                        <div className='mx-auto my-4 w-80 text-justify'>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>IT Support Service</h3>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Analyzing and identifying vulnerabilities of computer systems.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Proficiency in handling and resolving customer's inquiries.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Providing assistance in troubleshooting technological problems.</p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </Modal>
+                            </div>
+                        </div>
+                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                            <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><MdDesignServices/></div>
+                            <h3 className='text-lg font-semibold mt-5'>UI/UX Design</h3>
+                            <div className='flex py-5 my-2'>
+                                <button className='flex items-center' onClick={() => setOpen3(true)}>See More <IoIosArrowDroprightCircle 
+                                className='dark:text-yellow-300 text-green-500'/>
+                                </button>
+                                <Modal open={open3} onClose={() => setOpen3(false)}>
+                                    <div className='text-center w-80 my-5'>
+                                        <MdDesignServices size={56} className='mx-auto text-green-500'/>
+                                        <div className='mx-auto my-4 w-80 text-justify'>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>UI/UX Design</h3>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Proficiency in using Photoshop, Canva, or Figma.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Executing high quality design like landing pages, icons, logos, etc.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Delivering satisfying user experience and responsiveness.</p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </Modal>
+                            </div>
+                        </div>
+                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                            <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><SiAdobephotoshop/></div>
+                            <h3 className='text-lg font-semibold mt-5'>Pixel Animation</h3>
+                            <div className='flex py-5 my-2'>
+                                <button className='flex items-center' onClick={() => setOpen4(true)}>See More <IoIosArrowDroprightCircle 
+                                className='dark:text-yellow-300 text-green-500'/>
+                                </button>
+                                <Modal open={open4} onClose={() => setOpen4(false)}>
+                                    <div className='text-center w-80 my-5'>
+                                        <SiAdobephotoshop size={56} className='mx-auto text-green-500'/>
+                                        <div className='mx-auto my-4 w-80 text-justify'>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>Pixel Animation</h3>
+                                            <div className='text-sm text-gray-500 mb-2 '>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Proficiency in using Photoshop and Adobe Animate.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Delivering high quality Storytelling 2D Sprite Animations.</p>
+                                            </div>
+                                            <div className='text-sm text-gray-500 mb-2'>
+                                                <p className='flex justify-center'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                    Creating storyboards, effects, and custom 2D Sprite Art.</p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </Modal>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className='mt-10'>
+                    <h2 className='dark:text-white text-2xl text-center font-semibold py-2'>Get in touch</h2>
+                    <h4 className='dark:text-white text-md text-center my-5'>Let's talk.</h4>
+                </div>
+                <div className='flex flex-wrap justify-center pb-5'>
+                    <div className='grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2 gap-2 flex-shrink-0'>
+                        <div className='flex flex-shrink-0 text-4xl border-2 text-green-500 border-green-500 rounded-full p-4 
+                                        dark:border-yellow-300 dark:text-yellow-300'>
+                            <IoMdMail/>
+                            <div className='leading-none px-2 mt-2 text-sm text-black dark:text-white'>
+                                <p>guetaryan@gmail.com</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-shrink-0 text-4xl border-2 text-green-500 border-green-500 rounded-full p-4 
+                                        dark:border-yellow-300 dark:text-yellow-300'>
+                            <FaViber/>
+                            <div className='leading-none px-2 mt-2 text-sm text-black dark:text-white'>
+                                <p>+639214059462</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-shrink-0 text-4xl border-2 text-green-500 border-green-500 rounded-full p-4
+                                        dark:border-yellow-300 dark:text-yellow-300'>
+                            <FaFacebookMessenger/>
+                            <div className='leading-none px-2 mt-2 text-sm text-black dark:text-white'>
+                                <p>ryan.gueta.79</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        <ScrollBtn/>
         </div>
     );
 };

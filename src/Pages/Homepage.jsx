@@ -11,10 +11,12 @@ import GohanvsBlack from '../Images/GohanvsGokuBlack.jpg';
 import FCvsB from '../Images/FriezaCellVsBroly.jpg';
 import GokuvsBardock from '../Images/GokuVsBardock.jpg';
 import GvV from '../Images/GogetavsVegito.jpg';
+import XGvSG from '../Images/XenoGokuvsGoku.jpg';
 import { IoIosArrowDroprightCircle, IoMdMail } from "react-icons/io";
 import { SiAdobephotoshop } from "react-icons/si";
 import ScrollBtn from '../Components/ScrolltoTopBtn.jsx';
 import Modal from '../Components/Modal.jsx';
+
 
 
 function Homepage() {
@@ -306,12 +308,12 @@ function Homepage() {
                              </a>
                         </div>
                         <div className='my-2 relative group shadow-xl'>
-                                <img src={OrdersImg} 
+                                <img src={XGvSG} 
                                 className='object-cover rounded-xl group-hover:opacity-50 hover:ease-in-out duration-150
-                                cursor-pointer' alt='orders'/>
+                                cursor-pointer' alt='gokuvsgoku'/>
                                 <div className='opacity-0 group-hover:opacity-100 duration-300 absolute inset-y-5
                                 inset-x-0 bottom-0 flex justify-center items-center text-lg text-green-500 dark:text-white font-semibold'>
-                                Pharma-Mediko
+                                Xeno Goku vs Goku
                                 </div>
                         </div>
                     </div>
@@ -333,27 +335,27 @@ function Homepage() {
                                 </button>
                                 <Modal open={open} onClose={() => setOpen(false)}>
                                     <div className='text-center w-80 my-5'>
-                                        <BsGlobe size={56} className='mx-auto text-green-500'/>
+                                        <BsGlobe size={56} className='mx-auto text-green-500 dark:text-yellow-300'/>
                                         <div className='mx-auto my-4 w-80 text-justify'>
-                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>Web Development</h3>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center dark:text-white'>Web Development</h3>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Building websites with HTML, CSS, and JavaScript.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Utilizing frameworks such as Bootstrap and Tailwind.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Integration of website to Progressive Web App &#40;PWA&#41;</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Less experience with Wordpress or Wix but can manage.</p>
                                             </div>
                                         </div>
@@ -370,22 +372,22 @@ function Homepage() {
                                 </button>
                                 <Modal open={open2} onClose={() => setOpen2(false)}>
                                     <div className='text-center w-80 my-5'>
-                                        <MdOutlineSupportAgent size={56} className='mx-auto text-green-500'/>
+                                        <MdOutlineSupportAgent size={56} className='mx-auto text-green-500 dark:text-yellow-300'/>
                                         <div className='mx-auto my-4 w-80 text-justify'>
-                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>IT Support Service</h3>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center dark:text-white'>IT Support Service</h3>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Analyzing and identifying vulnerabilities of computer systems.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Proficiency in handling and resolving customer's inquiries.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Providing assistance in troubleshooting technological problems.</p>
                                             </div>
                                         </div>
@@ -402,22 +404,22 @@ function Homepage() {
                                 </button>
                                 <Modal open={open3} onClose={() => setOpen3(false)}>
                                     <div className='text-center w-80 my-5'>
-                                        <MdDesignServices size={56} className='mx-auto text-green-500'/>
+                                        <MdDesignServices size={56} className='mx-auto text-green-500 dark:text-yellow-300'/>
                                         <div className='mx-auto my-4 w-80 text-justify'>
-                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>UI/UX Design</h3>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center dark:text-white'>UI/UX Design</h3>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Proficiency in using Photoshop, Canva, or Figma.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Executing high quality design like landing pages, icons, logos, etc.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Delivering satisfying user experience and responsiveness.</p>
                                             </div>
                                         </div>
@@ -434,22 +436,22 @@ function Homepage() {
                                 </button>
                                 <Modal open={open4} onClose={() => setOpen4(false)}>
                                     <div className='text-center w-80 my-5'>
-                                        <SiAdobephotoshop size={56} className='mx-auto text-green-500'/>
+                                        <SiAdobephotoshop size={56} className='mx-auto text-green-500 dark:text-yellow-300'/>
                                         <div className='mx-auto my-4 w-80 text-justify'>
-                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center'>Pixel Animation</h3>
+                                            <h3 className='text-lg font-black text-gray-800 my-5 text-center dark:text-white'>Pixel Animation</h3>
                                             <div className='text-sm text-gray-500 mb-2 '>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Proficiency in using Photoshop and Adobe Animate.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Delivering high quality Storytelling 2D Sprite Animations.</p>
                                             </div>
                                             <div className='text-sm text-gray-500 mb-2'>
-                                                <p className='flex justify-center'>
-                                                    <BsFillPatchCheckFill size={20} className='text-green-500'/>
+                                                <p className='flex justify-center dark:text-white'>
+                                                    <BsFillPatchCheckFill size={20} className='text-green-500 dark:text-yellow-300'/>
                                                     Creating storyboards, effects, and custom 2D Sprite Art.</p>
                                             </div>
                                         </div>

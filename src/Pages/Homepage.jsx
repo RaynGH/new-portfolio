@@ -482,7 +482,9 @@ function Homepage() {
                                         dark:border-yellow-300 dark:text-yellow-300'>
                             <IoMdMail/>
                             <div className='leading-none px-2 mt-2 text-sm text-black dark:text-white'>
-                                <p>guetaryan@gmail.com</p>
+                                <a href='https://mail.google.com/mail/u/2/' target='blank'>
+                                    <p>guetaryan@gmail.com</p>
+                                </a>
                             </div>
                         </div>
                         <div className='flex flex-shrink-0 text-4xl border-2 text-green-500 border-green-500 rounded-full p-4 
@@ -496,7 +498,9 @@ function Homepage() {
                                         dark:border-yellow-300 dark:text-yellow-300'>
                             <FaFacebookMessenger/>
                             <div className='leading-none px-2 mt-2 text-sm text-black dark:text-white'>
-                                <p>ryan.gueta.79</p>
+                                <a href='https://www.facebook.com/ryan.gueta.79' target='blank'>
+                                    <p>ryan.gueta.79</p>
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -408,7 +408,7 @@ function Homepage() {
                         </div>
                         <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
                             <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><MdDesignServices/></div>
-                            <h3 className='text-lg font-semibold mt-5'>UI/UX Design</h3>
+                            <h3 className='text-lg font-semibold mt-5 text-center'>UI/UX Design</h3>
                             <div className='flex py-5 my-2'>
                                 <button className='flex items-center' onClick={() => setOpen3(true)}>See More <IoIosArrowDroprightCircle 
                                 className='dark:text-yellow-300 text-green-500'/>
@@ -440,7 +440,7 @@ function Homepage() {
                         </div>
                         <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
                             <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><SiAdobephotoshop/></div>
-                            <h3 className='text-lg font-semibold mt-5'>Pixel Animation</h3>
+                            <h3 className='text-lg font-semibold mt-5 text-center'>Pixel Animation</h3>
                             <div className='flex py-5 my-2'>
                                 <button className='flex items-center' onClick={() => setOpen4(true)}>See More <IoIosArrowDroprightCircle 
                                 className='dark:text-yellow-300 text-green-500'/>

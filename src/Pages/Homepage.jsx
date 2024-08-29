@@ -153,7 +153,7 @@ function Homepage() {
                                 <BsFillPatchCheckFill/>
                                 <div className='leading-none'>
                                     <p className='dark:text-white'>MySQL</p>
-                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Advance</span>
+                                    <span className='text-[11px] leading-none text-green-500 font-semibold dark:text-white'>Intermediate</span>
                                 </div>
                             </div>
                             <div className='flex flex-shrink-0 text-green-500 dark:text-yellow-300'>

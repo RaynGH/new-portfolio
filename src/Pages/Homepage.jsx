@@ -4,7 +4,7 @@ import Image from '../Images/CroppedPic.png';
 import { FaLinkedin, FaYoutube, FaGithub, FaViber, FaFacebookMessenger } from "react-icons/fa";
 import { MdSunny, MdOutlineSupportAgent, MdDesignServices } from "react-icons/md";
 import { BsFillPatchCheckFill, BsGlobe } from "react-icons/bs";
-// import OrdersImg from '../Images/Orders.png';
+ import CorumedImg from '../Images/corumed.png';
 import { useState } from 'react';
 import PepsimanVsKefla from '../Images/PepsimanVsKefla.jpg';
 import GohanvsBlack from '../Images/GohanvsGokuBlack.jpg';
@@ -17,7 +17,10 @@ import { SiAdobephotoshop } from "react-icons/si";
 import ScrollBtn from '../Components/ScrolltoTopBtn.jsx';
 import Modal from '../Components/Modal.jsx';
 import CV from '../Assets/CV_ORO.pdf';
-
+import HomepageImg from '../Images/Homepage 1.png';
+import OrdersImg from '../Images/Orders.png';
+import ProductsImg from '../Images/Products.png';
+import CartImg from '../Images/Cart.png';
 
 function Homepage() {
 
@@ -262,6 +265,35 @@ function Homepage() {
                 {/* Portfolio */}
                 <h3 className="text-2xl my-5 dark:text-white font-semibold">My Portfolio  / Previous works</h3>
                 <div className='flex flex-wrap justify-center'>
+                <h2 className='text-black dark:text-white py-2'>Designs</h2>
+                    <div className='lg:grid lg:grid-cols-3 lg:gap-4'>
+                            <div className='my-2 relative group shadow-xl rounded-lg'>
+                                <img src={CorumedImg} 
+                                    className='object-cover rounded-xl group-hover:opacity-30 hover:ease-in-out duration-150
+                                    cursor-pointer' alt='corumed1'/>
+                            </div>
+                            <div className='my-2 relative group shadow-xl rounded-xl'>
+                                <img src={HomepageImg} 
+                                    className='object-cover rounded-xl group-hover:opacity-30 hover:ease-in-out duration-150
+                                    cursor-pointer' alt='corumed2'/>
+                            </div>
+                            <div className='my-2 relative group shadow-xl rounded-xl'>
+                                <img src={ProductsImg} 
+                                    className='object-cover rounded-xl group-hover:opacity-30 hover:ease-in-out duration-150
+                                    cursor-pointer' alt='corumed3'/>
+                            </div>
+                            <div className='my-2 relative group shadow-xl rounded-xl'>
+                                <img src={OrdersImg} 
+                                    className='object-cover rounded-xl group-hover:opacity-30 hover:ease-in-out duration-150
+                                    cursor-pointer' alt='corumed4'/>
+                            </div>
+                            <div className='my-2 relative group shadow-xl rounded-xl'>
+                                <img src={CartImg} 
+                                    className='object-cover rounded-xl group-hover:opacity-30 hover:ease-in-out duration-150
+                                    cursor-pointer' alt='corumed5'/>
+                            </div>
+                    </div>
+                    <h2 className='text-black my-5 dark:text-white '>Animations</h2>
                     <div className='lg:grid lg:grid-cols-3 lg:gap-4'>
                         <div className='my-2 relative group shadow-xl'>
                             <a href='https://www.youtube.com/watch?v=HpWTzJZcoYg' target='blank'>
@@ -337,7 +369,7 @@ function Homepage() {
                 </div>
                 <div className='flex flex-wrap justify-center'>
                     <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-2 flex-shrink-0'>
-                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                        <div className='shadow-lg my-2 p-10 lg:p-8 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
                             <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><BsGlobe/></div>
                             <h3 className='text-lg font-semibold mt-5'>Web Development</h3>
                             <div className='flex py-5 my-2'>
@@ -374,7 +406,7 @@ function Homepage() {
                                 </Modal>
                             </div>
                         </div>
-                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                        <div className='shadow-lg my-2 p-10 lg:p-8 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
                             <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500 '><MdOutlineSupportAgent/></div>
                             <h3 className='text-lg font-semibold mt-5'>IT Support Service</h3>
                             <div className='flex py-5 my-2'>
@@ -406,7 +438,7 @@ function Homepage() {
                                 </Modal>
                             </div>
                         </div>
-                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                        <div className='shadow-lg my-2 p-10 lg:p-8 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
                             <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><MdDesignServices/></div>
                             <h3 className='text-lg font-semibold mt-5 text-center'>UI/UX Design</h3>
                             <div className='flex py-5 my-2'>
@@ -438,7 +470,7 @@ function Homepage() {
                                 </Modal>
                             </div>
                         </div>
-                        <div className='shadow-lg my-2 p-10 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
+                        <div className='shadow-lg my-2 p-10 lg:p-8 pb-0 bg-white rounded-lg dark:bg-blue-950 dark:text-white'>
                             <div className='flex justify-center text-5xl dark:text-yellow-300 text-green-500'><SiAdobephotoshop/></div>
                             <h3 className='text-lg font-semibold mt-5 text-center'>Pixel Animation</h3>
                             <div className='flex py-5 my-2'>
